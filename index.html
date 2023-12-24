@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Individual</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <img src="Logo.png" alt="Form logo">
+<div class="container">
+  <h1>For Individuals</h1>
+  <p class="company-text">Inspiring wholesome harmony for the mind, body and spirit, for everyone, everywhere.</p>
+  <form>
+    <div class="row">
+      <div class="col-sm-6">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName">
+      </div>
+      <br>
+      <div class="col-sm-6">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+          <option value="" disabled selected>Select here</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <br>
+      <div class="col-sm-6">
+        <label for="dateOfBirth">Date of Birth</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <label for="weight">Weight (KG)</label>
+        <input type="number" id="weight" name="weight" placeholder="Enter Weight">
+      </div>
+      <br>
+      <div class="col-sm-6">
+        <label for="Height">Height (CM)</label>
+                <input type="number"  name="height" id="height" placeholder="Enter height here"
+                required /> <br> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <label for="activityLevel">Activity Level</label>
+        <select id="activityLevel" name="activityLevel">
+          <option value="">Select here</option>
+        </select> <br> <br>
+      </div>
+      <div class="col-sm-6">
+        <label for="password">Password</label>
+        <div class="password-field"> 
+          <input type="password" id="password" name="password">
+          <img src="eye-password-hide-svgrepo-com.svg" alt="Show password" style="width: 15px; height: 15px" onclick="togglePasswordVisibility()">
+        </div>
+      </div>
+    </div>
+    <button type="submit">Register</button>
+    <p class="terms-text">By clicking Register, you agree to our <a href="./form.html">Terms of Use</a> and our <a href="./form.html">Privacy Policy</a></p>
+  </form>
+</div>
+<script>
+  function togglePasswordVisibility() {
+    const passwordField = document.getElementById("password");
+    const eyeIcon = document.querySelector(".password-field img");
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      eyeIcon.src = "eye-view-interface-symbol-svgrepo-com.svg";
+    } else {
+      passwordField.type = "password";
+      eyeIcon.src = "eye-password-hide-svgrepo-com.svg";
+    }
+  }
+</script>
+</body>
+</html>
